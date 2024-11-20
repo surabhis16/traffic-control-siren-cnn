@@ -36,7 +36,7 @@ def features_extractor(file_name):
     mfccs_scaled_features = np.mean(mfccs_features.T, axis=0)
 
     return mfccs_scaled_features
-audio_dataset_path = r'C:\\Users\\surya\\Downloads\\ML\\sounds'
+audio_dataset_path = r'C:\\Users\\surabhi\\Downloads\\ML\\sounds'
 
 extracted_features = []
 for path in os.listdir(audio_dataset_path):
