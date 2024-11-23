@@ -1,4 +1,3 @@
-
 # 🚑 **Emergency Vehicle Detection and Traffic Light Control System**
 
 This project aims to seamlessly integrate **audio processing** and **Arduino-based control systems** to **detect ambulance sirens** and dynamically manage **traffic lights**. The objective is to create a "green corridor" for emergency vehicles to ensure minimal delays at intersections, ultimately saving lives.
@@ -61,6 +60,17 @@ project/
 ## 🏁 **Getting Started**
 
 ### **Step 1: Dataset Preparation**
+
+The dataset contains **12,000 audio files**, primarily sourced from Kaggle. The files are categorized as follows:
+
+```
+sounds/
+├── ambulance/
+├── notambulance/
+```
+
+Each category contains various `.wav` files used for training the model. The ambulance sounds represent emergency vehicle sirens, while the notambulance sounds include everyday noises for classification contrast.
+
 1. **Organize `.wav` Files:**  
    Place your `.wav` files under two directories as shown:
    ```plaintext
