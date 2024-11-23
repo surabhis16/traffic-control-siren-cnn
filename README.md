@@ -149,20 +149,6 @@ Each category contains various `.wav` files used for training the model. The amb
 - **"Timer: XX secs"**:  
   Displays the remaining time for the **red light**.
 
----
-
-## 🛠️ **Troubleshooting**
-
-1. **Python Issues:**
-   - Ensure all required libraries are installed using `pip install -r requirements.txt`.
-   - Double-check file paths for the **audio files**, **feature files**, and **model weights**.
-
-2. **Arduino Issues:**
-   - Confirm serial communication between the Python script and Arduino is working.
-   - Ensure LEDs and LCD are wired correctly.
-
-3. **LCD Not Displaying:**
-   - Verify the **I2C address** (`0x27`) matches the one used by your LCD module.
 
 ---
 
