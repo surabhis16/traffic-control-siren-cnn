@@ -1,6 +1,6 @@
 # 🚑 **Emergency Vehicle Detection and Traffic Light Control System**
 
-This project aims to seamlessly integrate **audio processing** and **Arduino-based control systems** to **detect ambulance sirens** and dynamically manage **traffic lights**. The objective is to create a "green corridor" for emergency vehicles to ensure minimal delays at intersections, ultimately saving lives.
+This project aims to seamlessly integrate **audio processing** and **Arduino-based control systems** to **detect ambulance sirens** and dynamically manage **traffic lights**. The objective is to minimize delays at intersections, ultimately saving lives.
 
 ---
 
@@ -121,7 +121,7 @@ Each category contains various `.wav` files used for training the model. The amb
    - The classification result is then passed to Arduino, triggering the appropriate traffic light behavior.
 
 2. **Traffic Light Control (Arduino):**  
-   - **Ambulance Detected:** The **green light** will turn on for **5 seconds** to create a green corridor for the emergency vehicle.
+   - **Ambulance Detected:** The **green light** will turn on for **5 seconds** to allow the ambulance to pass.
    - **Not Ambulance:** The system will continue its default **red light cycle**.
 
 ---
@@ -149,6 +149,20 @@ Each category contains various `.wav` files used for training the model. The amb
 - **"Timer: XX secs"**:  
   Displays the remaining time for the **red light**.
 
+---
+
+## 🛠️ **Troubleshooting**
+
+1. **Python Issues:**
+   - Ensure all required libraries are installed using `pip install -r requirements.txt`.
+   - Double-check file paths for the **audio files**, **feature files**, and **model weights**.
+
+2. **Arduino Issues:**
+   - Confirm serial communication between the Python script and Arduino is working.
+   - Ensure LEDs and LCD are wired correctly.
+
+3. **LCD Not Displaying:**
+   - Verify the **I2C address** (`0x27`) matches the one used by your LCD module.
 
 ---
 
@@ -157,7 +171,10 @@ Each category contains various `.wav` files used for training the model. The amb
   Integrate a **microphone** for live audio detection and processing, enabling real-time traffic control.
 
 - **GPS Integration:**  
-  Add **GPS modules** to track ambulance locations and optimize green corridors across multiple intersections.
+  Add **GPS modules** to track ambulance locations and optimize traffic light control across multiple intersections.
+
+- **Computer Vision:**  
+  Integrate **computer vision** for vehicle detection and classification, adding an additional layer of accuracy in distinguishing emergency vehicles.
 
 - **Multi-Intersection Control:**  
   Extend the system to control **multiple traffic lights** in real time across a city.
@@ -167,5 +184,3 @@ Each category contains various `.wav` files used for training the model. The amb
 ## 📝 **License**
 
 This project is licensed under the **MIT License**.
-
----
