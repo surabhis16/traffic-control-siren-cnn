@@ -36,7 +36,7 @@ def features_extractor(file_name):
     mfccs_scaled_features = np.mean(mfccs_features.T, axis=0)
 
     return mfccs_scaled_features
-audio_dataset_path = r'C:\\Users\\surabhi\\Downloads\\ML\\sounds'
+audio_dataset_path = r'C:\\Users\\surya\\Downloads\\ML\\sounds'
 
 extracted_features = []
 for path in os.listdir(audio_dataset_path):
@@ -46,10 +46,10 @@ for path in os.listdir(audio_dataset_path):
             # Assuming features_extractor is a function defined elsewhere
             data = features_extractor(file_name)  
             extracted_features.append([data, path])
-f = open(r'C:\\Users\\surabhi\\OneDrive\\Desktop\\Extracted_Features352.pkl', 'wb')
+f = open(r'C:\\Users\\surya\\OneDrive\\Desktop\\Extracted_Features352.pkl', 'wb')
 pickle.dump(extracted_features, f)
 f.close()
-f = open(r'C:\\Users\\surabhi\\OneDrive\\Desktop\\Extracted_Features352.pkl', 'rb')
+f = open(r'C:\\Users\\surya\\OneDrive\\Desktop\\Extracted_Features352.pkl', 'rb')
 Data = pickle.load(f)
 f.close()
 df = pd.DataFrame(Data,columns=['feature','class'])
@@ -107,4 +107,4 @@ early_stop = EarlyStopping(monitor = 'val_accuracy', mode ='max',
 history = model_cnn.fit(X_train_features, y_train, epochs = 200, 
                        callbacks = [early_stop],
                        batch_size = 64, validation_data = (X_test_features, y_test))
-model.save("C:\\Users\\surabhi\\OneDrive\\Desktop\\ML\\saved_model352.h5")
+model.save("C:\\Users\\surya\\OneDrive\\Desktop\\ML\\saved_model352.h5")
