@@ -46,12 +46,12 @@ project/
 │
 ├── python_scripts/
 │   ├── feature_extraction.py         # Audio feature extraction script
-│   ├── train_model.py               # Script to train CNN model on features
+│   ├── trainingsavingmodel.py        # Script to train CNN model on features
 │   ├── saved_model352.h5            # Trained model weights
 │   ├── Extracted_Features352.pkl    # Serialized feature set
 │
 ├── arduino_code/
-│   ├── traffic_light_control.ino    # Arduino code to control traffic lights
+│   ├── trafficlightswithlcd.ino    # Arduino code to control traffic lights
 └── README.md                        # Project documentation
 ```
 
@@ -107,7 +107,7 @@ Each category contains various `.wav` files used for training the model. The amb
    - Connect the **LCD** to the **SDA** and **SCL** pins (A4 and A5 on Arduino Uno).
    
 2. **Upload the Code:**  
-   Open the `traffic_light_control.ino` in the **Arduino IDE**, verify, and upload it to your Arduino board.
+   Open the `trafficlightswithlcd.ino` in the **Arduino IDE**, verify, and upload it to your Arduino board.
 
 ---
 
